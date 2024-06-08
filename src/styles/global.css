@@ -1,0 +1,238 @@
+/* Import the Rubik font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+/* Set the base font size for rem units */
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+/* Apply the Rubik font to the entire application */
+body {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Define global styles for headings and paragraphs */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: #333;
+}
+
+p {
+  font-size: 1rem; /* 16px */
+  color: #666;
+}
+
+/* Various font sizes used in the application */
+.fs__14px {
+  font-size: 14px;
+  line-height: 16px;
+}
+.fs__16px {
+  font-size: 16px;
+  line-height: 18px;
+}
+.fs__18px {
+  font-size: 18px;
+  line-height: 20px;
+}
+.fs__24px {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+/* Various font colors used in the website */
+.color__ffffff {
+  color: #ffffff;
+}
+.color__165d59 {
+  color: #165d59;
+}
+.color__828282 {
+  color: #828282;
+}
+
+/* Vrious font weights */
+.fw400 {
+  font-weight: 400;
+}
+.fw500 {
+  font-weight: 500;
+}
+.fw600 {
+  font-weight: 600;
+}
+
+/*Animations */
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main__section {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 2rem;
+}
+.home__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: loading 0.5s ease-out;
+}
+
+/* Related to NavaBar */
+.navBar {
+  padding: 2rem 4rem 1.5rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+}
+.navBar .navBar__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin: auto;
+  list-style-type: none;
+}
+.navBar .navBar__right .navItem {
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Related to the seach container */
+.input__container {
+  position: relative;
+}
+.input__container .search__input {
+  height: 3rem;
+  width: 18rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  background-color: transparent;
+  border: 3px solid gray;
+  transition: all 0.3s ease-out;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.input__container .search__input:focus {
+  outline: none;
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
+}
+.input__container .icon__container {
+  cursor: pointer;
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+}
+.input__container .icon__container > svg {
+  transition: transform 0.3s ease-out;
+}
+.input__container .search__input:focus + .icon__container .stroke__gray {
+  stroke: white;
+}
+.input__container .search__input:focus + .icon__container > svg {
+  transform: scale(1.2);
+}
+
+/* Related to the loader component */
+.loader__section {
+  margin-top: 10rem;
+  width: 100%;
+}
+
+/* Related to the cards section */
+.cards__section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  margin-top: 3rem;
+  justify-content: space-around;
+}
+
+/* Related to the single card */
+.card__container {
+  min-height: 15rem;
+  width: 15rem;
+  border: 2px solid gray;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: gray;
+  padding: 1rem;
+  gap: 3rem;
+}
+.card__container:hover {
+  transform: scale(1.05);
+  border: 2.5px solid white;
+  color: white;
+}
+.add__button {
+  height: 2.5rem;
+  background-color: transparent;
+  color: gray;
+  border: 2px solid gray;
+  padding-inline: 1rem;
+  font-size: 14px;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-out;
+  font-weight: 600;
+}
+.add__button:hover {
+  color: rgba(0, 0, 0, 0.9);
+  background-color: whitesmoke;
+  border: 2px solid white;
+}
+
+@media (max-width: 992px) {
+  .navBar {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+  }
+  .navBar .navBar__right {
+    gap: 1rem;
+  }
+  .main__section {
+    padding: 2rem 1rem;
+  }
+  .cards__section {
+    row-gap: 2rem;
+    column-gap: 0.5rem;
+  }
+  .card__container {
+    gap: 2rem;
+    padding: 2rem 1rem;
+    min-width: 11.5rem;
+    min-height: 13rem;
+  }
+}
