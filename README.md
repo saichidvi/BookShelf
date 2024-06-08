@@ -23,4 +23,20 @@ Make sure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/saichidvi/BookShelf
+
+
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd BookShelf
+
+3. **Install dependencies using npm:**
+
+   ```bash
+   npm install
+
+3. **Start the  local server:**
+
+   ```bash
+   npm run dev
