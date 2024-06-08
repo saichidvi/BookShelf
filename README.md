@@ -4,7 +4,7 @@ This is a React-based BookStore application that allows users to search for book
 
 ## Live Demo
 
-Check out the live demo of the application deployed on Vercel: [BookStore Application](https://book-shelf-sai.vercel.app/)
+Check out the live demo of the application deployed on Vercel: [BookShelf Application](https://book-shelf-sai.vercel.app/)
 
 ## Getting Started
 
